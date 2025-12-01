@@ -1,16 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, } from "react";
 import gsap from "gsap";
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import { IoFitnessSharp } from "react-icons/io5";
+import Services from './Components/Services'
+import Benefits from './Components/Benefits'
 import { useCursorStore } from "./services";
-import Benefits from "./Components/Benefits";
-import Services from "./Components/Services";
-import MotivateText from "./Components/MotivateText";
-import Builder from "./Components/Builder";
-import BigText from "./Components/BigText";
-import PricingCard from "./Components/Trainers";
-import Pricing from "./Components/Pricing";
 import Video from "./Components/mini components/Video";
 
 const App = () => {
@@ -52,12 +45,9 @@ const App = () => {
       <Video />
       <Navbar/>
     </div>
-    <MotivateText/>
-    <PricingCard/>
-    <Pricing/>
-    
-    {/* <BigText/> */}
-    {/* <Builder/> */}
+      <Benefits/>
+      <Services/>
+
     </div>
       
   );
