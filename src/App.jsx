@@ -40,13 +40,13 @@ const App = () => {
   return (
     <div className="cursor-none overflow-hidden">
        <div id="cursor" className="size-5 bg-main fixed top-0 left-0 mix-blend-difference pointer-events-none z-[9999] " />
-    <div className="h-screen w-screen">
+    {/* <div className="h-screen w-screen"> */}
 
       <Video />
       <Navbar/>
-    </div>
+    {/* </div> */}
       <Benefits/>
-      <Services/>
+      {/* <Services/> */}
 
     </div>
       
