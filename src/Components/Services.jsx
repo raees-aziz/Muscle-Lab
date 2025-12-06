@@ -1,66 +1,74 @@
-import React from 'react'
+import React from "react";
+import gsap from "gsap";
+import { LiaNutritionix } from "react-icons/lia";
+import { MdTrackChanges } from "react-icons/md";
+import { MdOutlineFitnessCenter } from "react-icons/md";
+import { IoFitnessSharp } from "react-icons/io5";
+import { MdCardMembership } from "react-icons/md";
+import { HiUserGroup } from "react-icons/hi";
+import BulletPoint from "./mini components/BulletPoint";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger, SplitText } from "gsap/all";
-import gsap from 'gsap';
+import { ScrollTrigger,SplitText } from "gsap/all";
+import FitnessCards from "./mini components/FitnessCard";
 
-const Services = () => {
+const Benefits = () => {
 
-  gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger,SplitText)
+useGSAP(()=>{
+  
+  const split=SplitText.create('.fade-para2',{type:"words"})
+const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".benefit",
+        start: 'top center',
+        end: "80% 100%",
+        scrub:1,
+        // scrub: 1.5,
+        // pin: true,
+        // markers:true
 
-  useGSAP(() => {
-
-    // Ensure fonts are fully loaded before SplitText
-    document.fonts.ready.then(() => {
-      const split = SplitText.create('.fade-para', { type: "words" });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".benefit",
-          start: 'top center',
-          end: "80% 100%",
-          scrub: 1,
-        },
-      });
-
-      gsap.from('.fade-title', {
-        y: 100,
-        stagger: 0.3,
-        opacity: 0,
-        duration: 0.3,
-        delay: 0.3,
-      });
-
-      gsap.from(split.words, {
-        y: 100,
-        opacity: 0,
-        autoAlpha: 0,
-        stagger: {
-          amount: 0.5,
-          from: 'random',
-        },
-      });
+      },
     });
 
-  }, []);
+tl.from('.fade-title2',{
+  y:100,
+  stagger:0.3,
+  opacity:0,
+  duration:0.3,
+  delay:0.3
+})
+tl.from(split.words,{
+  y:100,
+  opacity:0,
+  autoAlpha:0,
+  stagger:{
+    amount:0.5,
+    from:'random'
+  }})
+
+
+
+},[])
 
   return (
     <div className="max-w-7xl mx-auto px-4 cursor-none benefit">
-      <div className="h-auto lg:h-screen w-full text-center pt-10 space-y-5">
+      <div className=" w-full text-center pt-10 space-y-5">
+        {/*  */}
+        <h4 className="fade-title2 text-8xl text-white font-bebas-neue">
+         Discover <br /> What Sets Us Apart        </h4>
 
-        <h4 className="fade-title text-6xl text-white font-bebas-neue">
-          Discover to <br /> Whats Sets Us Apart
-        </h4>
-
-        <p className="fade-para text-lg text-white font-bebas-neue">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque soluta
-          ducimus ab vel, facere aspernatur officiis temporibus, perspiciatis
-          quisquam sapiente dolorum earum veritatis. Cupiditate sed tenetur
-          alias nihil? Qui, aperiam.
+        <p className=" fade-para2 text-lg text-white   font-bebas-neue">
+          We Deliver A Fitness Experience That's Truly One-Of-Kind.Explore Now <br />
+          We Help You Archeive Your Goals Faster And Smarter.
         </p>
 
+<div>
+  <FitnessCards/>
+</div>
+      
       </div>
     </div>
   );
-}
+};
 
-export default Services;
+export default Benefits;

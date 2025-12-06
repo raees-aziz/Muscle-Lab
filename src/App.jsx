@@ -5,6 +5,7 @@ import Services from './Components/Services'
 import Benefits from './Components/Benefits'
 import { useCursorStore } from "./services";
 import Video from "./Components/mini components/Video";
+import MarqueAnimation from "./Components/MarqueAnimation";
 
 const App = () => {
   const { scale, radius, width, height } = useCursorStore();
@@ -45,8 +46,9 @@ const App = () => {
       <Video />
       <Navbar/>
     {/* </div> */}
+    <MarqueAnimation text="Yeh ek aasan aur shandaar marquee text effect hai! Isse GSAP ki madad se banaya gaya hai."/>
       <Benefits/>
-      {/* <Services/> */}
+      <Services/>
 
     </div>
       

@@ -53,7 +53,7 @@ tl.from(split.words,{
     <div className="max-w-7xl mx-auto px-4 cursor-none benefit">
       <div className=" w-full text-center pt-10 space-y-5">
         {/*  */}
-        <h4 className="fade-title text-6xl text-white font-bebas-neue">
+        <h4 className="fade-title text-8xl text-white font-bebas-neue">
           Inpired to <br /> Ispired Your best self
         </h4>
 
