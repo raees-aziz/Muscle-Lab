@@ -57,7 +57,7 @@ tl.from(split.words,{
           Inpired to <br /> Ispired Your best self
         </h4>
 
-        <p className=" fade-para text-lg text-white   font-bebas-neue">
+        <p className=" fade-para text-lg text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque soluta
           ducimus ab vel, facere aspernatur officiis temporibus, perspiciatis
           quisquam sapiente dolorum earum veritatis. Cupiditate sed tenetur

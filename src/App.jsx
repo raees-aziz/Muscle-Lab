@@ -6,6 +6,7 @@ import Benefits from './Components/Benefits'
 import { useCursorStore } from "./services";
 import Video from "./Components/mini components/Video";
 import MarqueAnimation from "./Components/MarqueAnimation";
+import GymProduct from "./Components/GymProduct";
 
 const App = () => {
   const { scale, radius, width, height } = useCursorStore();
@@ -49,6 +50,7 @@ const App = () => {
     <MarqueAnimation/>
       <Benefits/>
       <Services/>
+      <GymProduct/>
 
     </div>
       

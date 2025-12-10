@@ -17,7 +17,7 @@ const MarqueAnimation = () => {
       <Marquee speed={100} pauseOnHover={true} className='bg-main overflow-hidden'>
         Our Brand collaboration  Our Brand collaboration
       </Marquee>
-      <Marquee speed={100} pauseOnHover={true} className=' h-40 text-main overflow-hidden flex justify-center items-center gap-50'>
+      <Marquee speed={100} pauseOnHover={true} className='h-40 text-main overflow-hidden flex justify-center items-center gap-50'>
       {brandLogo.map((src,index)=>(
         <img className='object-center w-30 h-20  mx-30' key={index} src={src} alt="" />
       ))}  
