@@ -46,7 +46,7 @@ const App = () => {
       <Video />
       <Navbar/>
     {/* </div> */}
-    <MarqueAnimation text="Yeh ek aasan aur shandaar marquee text effect hai! Isse GSAP ki madad se banaya gaya hai."/>
+    <MarqueAnimation/>
       <Benefits/>
       <Services/>
 

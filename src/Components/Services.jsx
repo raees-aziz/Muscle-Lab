@@ -1,12 +1,5 @@
 import React from "react";
 import gsap from "gsap";
-import { LiaNutritionix } from "react-icons/lia";
-import { MdTrackChanges } from "react-icons/md";
-import { MdOutlineFitnessCenter } from "react-icons/md";
-import { IoFitnessSharp } from "react-icons/io5";
-import { MdCardMembership } from "react-icons/md";
-import { HiUserGroup } from "react-icons/hi";
-import BulletPoint from "./mini components/BulletPoint";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger,SplitText } from "gsap/all";
 import FitnessCards from "./mini components/FitnessCard";
@@ -52,12 +45,12 @@ tl.from(split.words,{
 
   return (
     <div className="max-w-7xl mx-auto px-4 cursor-none benefit">
-      <div className=" w-full text-center pt-10 space-y-5">
+      <div className="w-full text-center pt-10 space-y-5">
         {/*  */}
         <h4 className="fade-title2 text-8xl text-white font-bebas-neue">
          Discover <br /> What Sets Us Apart        </h4>
 
-        <p className=" fade-para2 text-lg text-white   font-bebas-neue">
+        <p className=" fade-para2 text-lg text-white">
           We Deliver A Fitness Experience That's Truly One-Of-Kind.Explore Now <br />
           We Help You Archeive Your Goals Faster And Smarter.
         </p>
