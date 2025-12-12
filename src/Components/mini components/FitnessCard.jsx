@@ -57,7 +57,7 @@ export default function FitnessCards() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl">
         {plans.map((p, i) => (
           <div
-            // key={i}
+            key={i}
             // initial={{ opacity: 0, y: 20 }}
             // animate={{ opacity: 1, y: 0 }}
             // transition={{ duration: 0.4, delay: i * 0.1 }}
