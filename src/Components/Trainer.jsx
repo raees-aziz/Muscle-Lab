@@ -18,13 +18,13 @@ const Trainer = () => {
                 <div className="container mx-auto px-4 py-8">
                     <h2 className="text-3xl font-bold text-center mb-8">Our Exercises</h2>
                     <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-                        {exercises.map(({title,img}, index) => (
-                           <div>
-                            <TrainerCard src={img} name={title}/>
-                            {/* <TrainerCard src={img} name={title}/>
+                        {exercises.map(({ title, img }, index) => (
+                            <div>
+                                <TrainerCard src={img} name={title} />
+                                {/* <TrainerCard src={img} name={title}/>
                             <TrainerCard src={img} name={title}/> */}
-                           
-                           </div>
+
+                            </div>
                         ))}
                     </div>
                 </div>
