@@ -2,74 +2,97 @@
 import { useState } from "react";
 // import trainers from "./trainers";
 import TrainerModal from "./mini components/TrainerModal";
+import { FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Trainers = () => {
 
-        const trainers = [
-  {
-    title: "Jhon Vick",
-    img: "/image/builder-2.jpg",
-    specialist: "Strength Training",
-    experience: "6 Years",
-    timing: "6:00 AM - 10:00 AM",
-    contact: "0301-2345678"
-  },
-  {
-    title: "Adam Zampa",
-    img: "/image/trainer-2.jpg",
-    specialist: "Cardio & Fat Loss",
-    experience: "5 Years",
-    timing: "5:00 PM - 9:00 PM",
-    contact: "0302-9876543"
-  },
-  {
-    title: "Micky",
-    img: "/image/trainer-1.jpg",
-    specialist: "Muscle Building",
-    experience: "4 Years",
-    timing: "7:00 AM - 11:00 AM",
-    contact: "0303-1122334"
-  },
-  {
-    title: "Donetello",
-    img: "/image/exercise4.jpg",
-    specialist: "HIIT & Fat Burn",
-    experience: "7 Years",
-    timing: "4:00 PM - 8:00 PM",
-    contact: "0304-5566778"
-  },
-  {
-    title: "Raphelo",
-    img: "/image/exercise5.jpg",
-    specialist: "Body Transformation",
-    experience: "8 Years",
-    timing: "6:00 PM - 10:00 PM",
-    contact: "0305-8899001"
-  },
-  {
-    title: "Leonardo",
-    img: "/image/exercise6.jpg",
-    specialist: "Beginner Fitness Coach",
-    experience: "3 Years",
-    timing: "8:00 AM - 12:00 PM",
-    contact: "0306-4455667"
-  }
-];
+  const trainers = [
+    {
+      title: "Jhon Vick",
+      img: "/image/builder-2.jpg",
+      specialist: "Strength Training",
+      experience: "6 Years",
+      timing: "6:00 AM - 10:00 AM",
+      contact: "0301-2345678",
+     
+        instagram: 'https://www.instagram.com/',
+        whatsapp: 'https://www.whatsapp.com/'
+      
+    },
+    {
+      title: "Adam Zampa",
+      img: "/image/trainer-2.jpg",
+      specialist: "Cardio & Fat Loss",
+      experience: "5 Years",
+      timing: "5:00 PM - 9:00 PM",
+      contact: "0302-9876543",
+      
+        instagram: 'https://www.instagram.com/',
+        whatsapp: 'https://www.whatsapp.com/'
+      
+    },
+    {
+      title: "Micky",
+      img: "/image/trainer-1.jpg",
+      specialist: "Muscle Building",
+      experience: "4 Years",
+      timing: "7:00 AM - 11:00 AM",
+      contact: "0303-1122334", 
+        instagram: 'https://www.instagram.com/',
+        whatsapp: 'https://www.whatsapp.com/'
+      
+    },
+    {
+      title: "Donetello",
+      img: "/image/exercise4.jpg",
+      specialist: "HIIT & Fat Burn",
+      experience: "7 Years",
+      timing: "4:00 PM - 8:00 PM",
+      contact: "0304-5566778",
+        instagram: 'https://www.instagram.com/',
+        whatsapp: 'https://www.whatsapp.com/'
+      
+    },
+    {
+      title: "Raphelo",
+      img: "/image/exercise5.jpg",
+      specialist: "Body Transformation",
+      experience: "8 Years",
+      timing: "6:00 PM - 10:00 PM",
+      contact: "0305-8899001",
+        instagram: 'https://www.instagram.com/',
+        whatsapp: 'https://www.whatsapp.com/'
+      
+    },
+    {
+      title: "Leonardo",
+      img: "/image/exercise6.jpg",
+      specialist: "Beginner Fitness Coach",
+      experience: "3 Years",
+      timing: "8:00 AM - 12:00 PM",
+      contact: "0306-4455667",
+        instagram: 'https://www.instagram.com/',
+        whatsapp: 'https://www.whatsapp.com/'
+      
+    }
+  ];
   const [selectedTrainer, setSelectedTrainer] = useState(null);
 
   return (
-    <section className="bg-black px-4 py-10">
-      <div className="max-w-7xl mx-auto grid gap-6
-        grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <section className="max-w-7xl mx-auto px-4 py-10">
+      <h4 className="fade-title2 text-6xl md:text-8xl text-center text-white font-bebas-neue">
+        Professional<br /> Trainer
+      </h4>
 
+      <div className="flex flex-wrap justify-center items-center gap-10">
         {trainers.map((item, index) => (
           <div
             key={index}
-            className="bg-zinc-900 rounded-2xl overflow-hidden
-            shadow-lg hover:-translate-y-2 transition"
+            className="flex flex-col items-center"
           >
-            {/* Image */}
-            <div className="h-64">
+            {/* Image Wrapper */}
+            <div onClick={() => setSelectedTrainer(item)} className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-gray-400">
               <img
                 src={item.img}
                 alt={item.title}
@@ -77,33 +100,24 @@ const Trainers = () => {
               />
             </div>
 
-            {/* Card Content */}
-            <div className="p-5 text-center">
-              <h3 className="text-xl font-semibold text-white">
-                {item.title}
-              </h3>
-              <p className="text-gray-400 text-sm mt-1">
-                {item.specialist}
-              </p>
-
-              <button
-                onClick={() => setSelectedTrainer(item)}
-                className="mt-4 px-6 py-2 rounded-full cursor
-                bg-green-500 text-black font-semibold
-                hover:bg-green-400 transition"
-              >
-                View Profile
-              </button>
-            </div>
+            {/* Name */}
+            <p className="mt-2 text-2xl text-main font-bebas-neue  text-center">
+              {item.title}
+            </p>
+            <div className="text-main flex gap-3 text-2xl "><a className="cursor-none" target="_blank" href={item.instagram}><FaInstagram className="text-pink-600 " /></a><a className="cursor-none" target="_blank" href={item.instagram}><FaWhatsapp /></a></div>
           </div>
         ))}
       </div>
+
 
       {/* Modal */}
       <TrainerModal
         trainer={selectedTrainer}
         onClose={() => setSelectedTrainer(null)}
       />
+      <div className="h-[70vh] w-full bg-red-400 mt-10">
+
+      </div>
     </section>
   );
 };

@@ -30,7 +30,7 @@ const GymProduct = () => {
 
       <div className="mt-12">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={24}
           navigation
           pagination={{ clickable: true }}
@@ -50,12 +50,12 @@ const GymProduct = () => {
         >
           {exercises.map((exercise, index) => (
             <SwiperSlide key={index}>
-              <div className="overflow-hidden rounded-2xl shadow-lg group">
+              <div className="overflow-hidden rounded-2xl shadow-lg ">
                 <img
                   src={exercise.img}
                   alt={exercise.title}
-                  className="w-full h-[400px] object-cover grayscale 
-                  transform transition duration-500 group-hover:scale-110"
+                  className="w-full h-[600px] object-cover grayscale 
+                  transform transition duration-500"
                 />
 
                 <div className="bg-black/60 text-main font-bebas-neue 
