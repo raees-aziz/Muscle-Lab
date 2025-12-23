@@ -8,6 +8,7 @@ import Video from "./Components/mini components/Video";
 import MarqueAnimation from "./Components/MarqueAnimation";
 import GymProduct from "./Components/GymProduct";
 import Trainer from "./Components/Trainer";
+import Contact from "./Components/Contact";
 
 const App = () => {
   const { scale, radius, width, height } = useCursorStore();
@@ -53,6 +54,7 @@ const App = () => {
       <Services/>
       <GymProduct/>
       <Trainer/>
+      <Contact/>
 
     </div>
       

@@ -7,10 +7,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const exercises = [
-  { title: "Barbell Basics", img: "/image/exercise.jpg" },
-  { title: "Hantelbell Masterclass", img: "/image/exercise2.jpg" },
-  { title: "Cardio Power Boost", img: "/image/exercise3.avif" },
-  { title: "Hypertrophy", img: "/image/exercise4.jpg" },
+  { title: "Barbell Basics", img: "/image/room.jpg" },
+  { title: "Hantelbell Masterclass", img: "/image/room2.jpg" },
+  { title: "Cardio Power Boost", img: "/image/room3.jpg" },
+  { title: "Hypertrophy", img: "/image/room4.jpg" },
   { title: "Rope Climbing", img: "/image/exercise5.jpg" },
   { title: "TRX Suspension", img: "/image/exercise6.jpg" },
 ];
@@ -54,7 +54,7 @@ const GymProduct = () => {
                 <img
                   src={exercise.img}
                   alt={exercise.title}
-                  className="w-full h-[600px] object-cover grayscale 
+                  className="w-full h-[600px] object-center grayscale 
                   transform transition duration-500"
                 />
 

@@ -2,6 +2,7 @@
 import { useState } from "react";
 // import trainers from "./trainers";
 import TrainerModal from "./mini components/TrainerModal";
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -15,10 +16,10 @@ const Trainers = () => {
       experience: "6 Years",
       timing: "6:00 AM - 10:00 AM",
       contact: "0301-2345678",
-     
-        instagram: 'https://www.instagram.com/',
-        whatsapp: 'https://www.whatsapp.com/'
-      
+
+      instagram: 'https://www.instagram.com/',
+      whatsapp: 'https://www.whatsapp.com/'
+
     },
     {
       title: "Adam Zampa",
@@ -27,10 +28,10 @@ const Trainers = () => {
       experience: "5 Years",
       timing: "5:00 PM - 9:00 PM",
       contact: "0302-9876543",
-      
-        instagram: 'https://www.instagram.com/',
-        whatsapp: 'https://www.whatsapp.com/'
-      
+
+      instagram: 'https://www.instagram.com/',
+      whatsapp: 'https://www.whatsapp.com/'
+
     },
     {
       title: "Micky",
@@ -38,10 +39,10 @@ const Trainers = () => {
       specialist: "Muscle Building",
       experience: "4 Years",
       timing: "7:00 AM - 11:00 AM",
-      contact: "0303-1122334", 
-        instagram: 'https://www.instagram.com/',
-        whatsapp: 'https://www.whatsapp.com/'
-      
+      contact: "0303-1122334",
+      instagram: 'https://www.instagram.com/',
+      whatsapp: 'https://www.whatsapp.com/'
+
     },
     {
       title: "Donetello",
@@ -50,9 +51,9 @@ const Trainers = () => {
       experience: "7 Years",
       timing: "4:00 PM - 8:00 PM",
       contact: "0304-5566778",
-        instagram: 'https://www.instagram.com/',
-        whatsapp: 'https://www.whatsapp.com/'
-      
+      instagram: 'https://www.instagram.com/',
+      whatsapp: 'https://www.whatsapp.com/'
+
     },
     {
       title: "Raphelo",
@@ -61,9 +62,9 @@ const Trainers = () => {
       experience: "8 Years",
       timing: "6:00 PM - 10:00 PM",
       contact: "0305-8899001",
-        instagram: 'https://www.instagram.com/',
-        whatsapp: 'https://www.whatsapp.com/'
-      
+      instagram: 'https://www.instagram.com/',
+      whatsapp: 'https://www.whatsapp.com/'
+
     },
     {
       title: "Leonardo",
@@ -72,17 +73,17 @@ const Trainers = () => {
       experience: "3 Years",
       timing: "8:00 AM - 12:00 PM",
       contact: "0306-4455667",
-        instagram: 'https://www.instagram.com/',
-        whatsapp: 'https://www.whatsapp.com/'
-      
+      instagram: 'https://www.instagram.com/',
+      whatsapp: 'https://www.whatsapp.com/'
+
     }
   ];
   const [selectedTrainer, setSelectedTrainer] = useState(null);
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-10">
-      <h4 className="fade-title2 text-6xl md:text-8xl text-center text-white font-bebas-neue">
-        Professional<br /> Trainer
+      <h4 className="fade-title2 text-main text-6xl md:text-8xl text-center my-5 font-bebas-neue">
+      Trainers
       </h4>
 
       <div className="flex flex-wrap justify-center items-center gap-10">
@@ -104,7 +105,7 @@ const Trainers = () => {
             <p className="mt-2 text-2xl text-main font-bebas-neue  text-center">
               {item.title}
             </p>
-            <div className="text-main flex gap-3 text-2xl "><a className="cursor-none" target="_blank" href={item.instagram}><FaInstagram className="text-pink-600 " /></a><a className="cursor-none" target="_blank" href={item.instagram}><FaWhatsapp /></a></div>
+            <div className="text-main flex gap-3 text-2xl "><a className="cursor-none" target="_blank" href={item.instagram}><FaInstagram className="text-pink-600 " /></a><a className="cursor-none" target="_blank" href={item.whatsapp}><FaWhatsapp /></a></div>
           </div>
         ))}
       </div>
@@ -115,8 +116,14 @@ const Trainers = () => {
         trainer={selectedTrainer}
         onClose={() => setSelectedTrainer(null)}
       />
-      <div className="h-[70vh] w-full bg-red-400 mt-10">
-
+      <h4 className="text-5xl mt-10 text-center text-white font-bebas-neue">
+        Trained Under Our Professional
+      </h4>
+      <div className="w-full mt-10 rounded-2xl">
+      <ReactCompareSlider
+      itemOne={<ReactCompareSliderImage src="/image/skinny.jpg" alt="Image one" />}
+      itemTwo={<ReactCompareSliderImage className="rounded-2xl object-center" src="/image/strong.jpg" alt="Image two" />}
+    />
       </div>
     </section>
   );
