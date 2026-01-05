@@ -11,8 +11,7 @@ const Contact = () => {
                         <img src="/image/input.png" alt="" />
                     </div>
                     <input className='absolute right-70 bottom-40 text-center border-b-2 border-black  text-2xl font-bebas-neue z-100 w-1/2 px-2 py-6 rounded-xl' type="text" placeholder='abc@musclelab.com' />
-                    {/* <button className="mx-auto z-100 cursor-none size-20 font-bebas-neue tracking-widest text-xl absolute bottom-10 font-bold rounded-full before:content-['Hello_World'] bg-red-900"></button> */}
-                    <div className='absolute bottom-0 left-75 flex justify-center w-1/2 py-2'><Circular/></div>
+                    <button className='absolute bottom-0 text-2xl mb- cursor-none mb-4 p-2 w-30 bg-primary text-main font-bebas-neue rounded-lg'>SUBMIT</button>
                 </div>
 
             </div>
