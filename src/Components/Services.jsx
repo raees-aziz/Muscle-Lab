@@ -61,21 +61,7 @@ const Benefits = () => {
         </div>
 
       </div>
-      <div className="w-full text-center pt-10 space-y-5">
-        {/*  */}
-        <h4 className="fade-title2 text-8xl text-white font-bebas-neue">
-          Discover <br /> What Sets Us Apart        </h4>
-
-        <p className=" fade-para2 text-lg text-white">
-          We Deliver A Fitness Experience That's Truly One-Of-Kind.Explore Now <br />
-          We Help You Archeive Your Goals Faster And Smarter.
-        </p>
-
-        <div>
-          <FitnessCards />
-        </div>
-
-      </div>
+      
     </div>
   );
 };
